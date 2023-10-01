@@ -62,6 +62,6 @@ const styles = StyleSheet.create({
     textNetflix: {
         color: '#E50914',
         fontWeight: 'bold',
-        fontSize: 55,
+        fontSize: 60,
     },
 });
