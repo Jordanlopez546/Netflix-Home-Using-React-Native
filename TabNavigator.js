@@ -3,6 +3,7 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from './screens/HomeScreen';
 import { Ionicons } from '@expo/vector-icons'
+import GamesScreen from './screens/GamesScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -21,7 +22,7 @@ const TabNavigator = () => {
                 if (route.name === 'Home') {
                     iconName = focused ? 'home' : 'home-outline';
                 }
-                else if (route.name === 'Home2') {
+                else if (route.name === 'Games') {
                     iconName = focused ? 'game-controller' : 'game-controller-outline';
                 }
                 else if (route.name === 'Home3') {
@@ -34,7 +35,7 @@ const TabNavigator = () => {
             }
         })} >
             <Tab.Screen name="Home" component={HomeScreen} />
-            <Tab.Screen name="Home2" component={HomeScreen} />
+            <Tab.Screen name="Games" component={GamesScreen} />
             <Tab.Screen name="Home3" component={HomeScreen} />
             <Tab.Screen name="Home4" component={HomeScreen} />
         </Tab.Navigator>
