@@ -41,6 +41,6 @@ const styles = StyleSheet.create({
     },
     gameViewContainer: {
         flex: 0.94,
-        backgroundColor: 'tomato',
+        backgroundColor: 'black',
     },
 })

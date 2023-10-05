@@ -1,15 +1,13 @@
 import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
-import { Feather } from '@expo/vector-icons'
-import MobileGamesComponent from './MobileGamesComponent'
-import SecondMobileGamesComponent from './SecondMobileGamesComponent'
-import ThirdMobileGamesComponent from './ThirdMobileGamesComponent'
+import GameViewComponent from './GameViewComponent'
+import GameViewComponentTwo from './GameViewComponentTwo'
 
 const GameImage = () => {
     const data = [
         {
             id: '1',
-            image: require('../assets/four.jpg'),
+            image: require('../assets/one.jpg'),
         },
         {
             id: '2',
@@ -17,11 +15,15 @@ const GameImage = () => {
         },
         {
             id: '3',
-            image: require('../assets/one.jpg'),
+            image: require('../assets/four.jpg'),
         },
         {
             id: '4',
             image: require('../assets/six.jpg'),
+        },
+        {
+            id: '5',
+            image: require('../assets/22.jpg'),
         },
     ]
 
@@ -43,7 +45,7 @@ const GameImage = () => {
                                 <View style={{ position: 'absolute', bottom: 50 }}>
                                     <Text style={styles.dungeonText}>Dungeon Boss: Respawned</Text>
                                 </View>
-                                <View style={{ position: 'absolute', bottom: 30, flexDirection: 'row', paddingRight: 10 }}>
+                                <View style={{ position: 'absolute', bottom: 25, flexDirection: 'row', paddingRight: 10 }}>
                                     <Text style={{ color: '#E0E0E0', marginHorizontal: 5, fontSize: 16, fontWeight: '300' }}>Fighting</Text>
                                     <Text style={{ color: '#E0E0E0', marginHorizontal: 5, fontSize: 16, fontWeight: '300' }}>Fantasy</Text>
                                     <Text style={{ color: '#E0E0E0', marginHorizontal: 5, fontSize: 16, fontWeight: '300' }}>Role-Playing</Text>
@@ -54,15 +56,19 @@ const GameImage = () => {
                         :
                         index === 1 ?
                             (
-                                <MobileGamesComponent name={'Mobile Games'} />
+                                <GameViewComponent name={'Recently Released'} />
                             ) :
                             index === 2 ?
                                 (
-                                    <SecondMobileGamesComponent name={'Trending Now'} />
+                                    <GameViewComponentTwo name={'Life Simulation Games'} />
+                                )
+                                : index === 3 ?
+                                (
+                                    <GameViewComponent name={'Role-Playing Games'} />
                                 )
                                 :
                                 (
-                                    <ThirdMobileGamesComponent name={'Only on Netflix'} />
+                                    <GameViewComponentTwo name={'Shooter Games'} />
                                 )
                 }
 
