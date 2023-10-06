@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from './screens/HomeScreen';
 import { Ionicons } from '@expo/vector-icons'
 import GamesScreen from './screens/GamesScreen';
+import ProfileScreen from './screens/ProfileScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -28,7 +29,7 @@ const TabNavigator = () => {
                 else if (route.name === 'Home3') {
                     iconName = focused ? 'ios-videocam' : 'ios-videocam-outline';
                 }
-                else if (route.name === 'Home4') {
+                else if (route.name === 'Profile') {
                     iconName = focused ? 'person-circle' : 'person-circle-outline';
                 }
                 return <Ionicons name={iconName} size={focused ? 30 : size} color={color} />
@@ -37,7 +38,7 @@ const TabNavigator = () => {
             <Tab.Screen name="Home" component={HomeScreen} />
             <Tab.Screen name="Games" component={GamesScreen} />
             <Tab.Screen name="Home3" component={HomeScreen} />
-            <Tab.Screen name="Home4" component={HomeScreen} />
+            <Tab.Screen name="Profile" component={ProfileScreen} />
         </Tab.Navigator>
     )
 }
