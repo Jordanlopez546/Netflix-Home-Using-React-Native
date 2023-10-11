@@ -5,6 +5,7 @@ import HomeScreen from './screens/HomeScreen';
 import { Ionicons } from '@expo/vector-icons'
 import GamesScreen from './screens/GamesScreen';
 import ProfileScreen from './screens/ProfileScreen';
+import NewAndHotScreen from './screens/NewAndHotScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -26,7 +27,7 @@ const TabNavigator = () => {
                 else if (route.name === 'Games') {
                     iconName = focused ? 'game-controller' : 'game-controller-outline';
                 }
-                else if (route.name === 'Home3') {
+                else if (route.name === 'NewAndHot') {
                     iconName = focused ? 'ios-videocam' : 'ios-videocam-outline';
                 }
                 else if (route.name === 'Profile') {
@@ -37,7 +38,7 @@ const TabNavigator = () => {
         })} >
             <Tab.Screen name="Home" component={HomeScreen} />
             <Tab.Screen name="Games" component={GamesScreen} />
-            <Tab.Screen name="Home3" component={HomeScreen} />
+            <Tab.Screen name="NewAndHot" component={NewAndHotScreen} />
             <Tab.Screen name="Profile" component={ProfileScreen} />
         </Tab.Navigator>
     )

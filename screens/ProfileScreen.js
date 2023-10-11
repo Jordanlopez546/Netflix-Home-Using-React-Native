@@ -1,12 +1,13 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { Feather, MaterialIcons } from '@expo/vector-icons';
-import ProfileViewComponent from '../component/ProfileViewComponent';
+import ProfileViewComponent from './ProfileViewComponent';
+
 
 const ProfileScreen = () => {
     return (
         <View style={styles.container}>
-            <View style={styles.myNetflixAndIcons}>
+            <View style={[styles.myNetflixAndIcons, {padding: 10}]}>
                 <Text style={styles.myNetflixText}>My Netflix</Text>
                 <View style={styles.icons}>
                     <TouchableOpacity>
@@ -18,7 +19,7 @@ const ProfileScreen = () => {
                 </View>
             </View>
             <View style={styles.lastView}>
-                <ProfileViewComponent/>
+                <ProfileViewComponent />
             </View>
         </View>
     )
@@ -47,7 +48,7 @@ const styles = StyleSheet.create({
     },
     myNetflixText: {
         fontWeight: 'bold',
-        fontSize: 22,
+        fontSize: 25,
         color: 'white',
         marginHorizontal: 10
     },

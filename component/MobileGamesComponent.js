@@ -2,7 +2,7 @@ import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from 'react
 import React from 'react'
 import { MaterialIcons } from '@expo/vector-icons'
 
-const MobileGamesComponent = ({ name }) => {
+const MobileGamesComponent = ({ name, myList }) => {
     const data = [
         {
             id: '1',
@@ -53,7 +53,7 @@ const MobileGamesComponent = ({ name }) => {
             <View style={styles.nameIconMyListContainer}>
                 <Text style={styles.name}>{name}</Text>
                 <TouchableOpacity style={styles.iconMyListContainer}>
-                    <Text style={styles.myList}>My List</Text>
+                    <Text style={styles.myList}>{myList}</Text>
                     <MaterialIcons name="keyboard-arrow-right" style={{ marginTop: 2 }} color={'white'} size={35} />
                 </TouchableOpacity>
             </View>

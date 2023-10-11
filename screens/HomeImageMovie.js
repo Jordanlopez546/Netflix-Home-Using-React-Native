@@ -1,9 +1,9 @@
 import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { Feather } from '@expo/vector-icons'
-import MobileGamesComponent from './MobileGamesComponent'
-import SecondMobileGamesComponent from './SecondMobileGamesComponent'
-import ThirdMobileGamesComponent from './ThirdMobileGamesComponent'
+import MobileGamesComponent from '../component/MobileGamesComponent'
+import SecondMobileGamesComponent from '../component/SecondMobileGamesComponent'
+import ThirdMobileGamesComponent from '../component/ThirdMobileGamesComponent'
 
 const HomeImageMovie = () => {
     const data = [
@@ -50,7 +50,7 @@ const HomeImageMovie = () => {
                         :
                         index === 1 ?
                             (
-                                <MobileGamesComponent name={'Mobile Games'} />
+                                <MobileGamesComponent name={'Mobile Games'} myList={'My List'} />
                             ) :
                             index === 2 ?
                                 (

@@ -1,7 +1,7 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { Feather, MaterialIcons } from '@expo/vector-icons'
-import HomeImageMovie from '../component/HomeImageMovie'
+import HomeImageMovie from './HomeImageMovie'
 
 const HomeScreen = () => {
     return (
@@ -21,7 +21,7 @@ const HomeScreen = () => {
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.the_link}>
                     <Text style={styles.linkText}>Categories</Text>
-                    <MaterialIcons name="keyboard-arrow-down" style={{marginTop: 5}} color={'white'} size={17} />
+                    <MaterialIcons name="keyboard-arrow-down" style={{ marginTop: 5 }} color={'white'} size={17} />
                 </TouchableOpacity>
             </View>
             <View style={styles.movieOne}>

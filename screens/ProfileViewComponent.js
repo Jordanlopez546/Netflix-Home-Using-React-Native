@@ -1,9 +1,9 @@
 import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { MaterialIcons, FontAwesome, Octicons } from '@expo/vector-icons'
-import MobileGamesComponent from './MobileGamesComponent'
-import SecondMobileGamesComponent from './SecondMobileGamesComponent'
-import ThirdMobileGamesComponent from './ThirdMobileGamesComponent'
+import MobileGamesComponent from '../component/MobileGamesComponent'
+import SecondMobileGamesComponent from '../component/SecondMobileGamesComponent'
+import ThirdMobileGamesComponent from '../component/ThirdMobileGamesComponent'
 
 const ProfileViewComponent = () => {
     const data = [
@@ -32,11 +32,11 @@ const ProfileViewComponent = () => {
                     index === 0 ?
                         (
                             <View style={styles.movieOne}>
-                                <View style={styles.imageNameContainer}>
-                                    <TouchableOpacity style={{ justifyContent: 'center' }}>
+                                <TouchableOpacity style={styles.imageNameContainer}>
+                                    <View style={{ justifyContent: 'center' }}>
                                         <Image style={styles.image} source={item.image} />
-                                    </TouchableOpacity>
-                                    <TouchableOpacity style={{ flexDirection: 'row' }}>
+                                    </View>
+                                    <View style={{ flexDirection: 'row' }}>
                                         <Text style={{
                                             fontWeight: 'bold',
                                             fontSize: 22,
@@ -44,8 +44,8 @@ const ProfileViewComponent = () => {
                                             marginTop: -10
                                         }}>Jordan Lopez</Text>
                                         <MaterialIcons name="keyboard-arrow-down" style={{ marginTop: -5 }} color={'white'} size={25} />
-                                    </TouchableOpacity>
-                                </View>
+                                    </View>
+                                </TouchableOpacity>
                                 <TouchableOpacity style={styles.alarmNotificationsIconContainer}>
                                     <View style={styles.alarmNotificationsContainer}>
                                         <View style={styles.alarmcontainer}>
@@ -116,7 +116,6 @@ const ProfileViewComponent = () => {
                                 <TouchableOpacity style={[styles.alarmNotificationsIconContainer]}>
                                     <View style={styles.alarmNotificationsContainer}>
                                         <View style={[styles.alarmcontainer, {backgroundColor: '#0089E6'}]}>
-                                            {/* <FontAwesome name="bell-o" size={24} color="white" /> */}
                                             <Octicons name="download" size={24} color="white" />
                                         </View>
                                         <Text style={{
@@ -134,15 +133,15 @@ const ProfileViewComponent = () => {
                         :
                         index === 1 ?
                             (
-                                <MobileGamesComponent name={'Mobile Games'} />
+                                <MobileGamesComponent name={'My List'} myList={''} />
                             ) :
                             index === 2 ?
                                 (
-                                    <SecondMobileGamesComponent name={'Trending Now'} />
+                                    <SecondMobileGamesComponent name={"Trailers You've Watched"} />
                                 )
                                 :
                                 (
-                                    <ThirdMobileGamesComponent name={'Only on Netflix'} />
+                                    <ThirdMobileGamesComponent name={"Continue Watching for Jordan Lopez"} />
                                 )
                 }
 
