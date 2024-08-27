@@ -8,7 +8,7 @@ const ProfileScreen = () => {
     return (
         <View style={styles.container}>
             <View style={[styles.myNetflixAndIcons, {padding: 10}]}>
-                <Text style={styles.myNetflixText}>My Netflix</Text>
+                <Text style={styles.myNetflixText}>Joe Netflix</Text>
                 <View style={styles.icons}>
                     <TouchableOpacity>
                         <Feather name="search" size={28} color="white" />

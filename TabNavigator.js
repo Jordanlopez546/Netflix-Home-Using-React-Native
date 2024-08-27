@@ -28,7 +28,7 @@ const TabNavigator = () => {
                     iconName = focused ? 'game-controller' : 'game-controller-outline';
                 }
                 else if (route.name === 'NewAndHot') {
-                    iconName = focused ? 'ios-videocam' : 'ios-videocam-outline';
+                    iconName = focused ? 'videocam' : 'videocam-outline';
                 }
                 else if (route.name === 'Profile') {
                     iconName = focused ? 'person-circle' : 'person-circle-outline';
